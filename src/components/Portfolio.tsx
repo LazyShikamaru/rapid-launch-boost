@@ -7,30 +7,23 @@ const Portfolio = () => {
   const projects = [
     {
       title: "Preshy Scents",
-      category: "E-Commerce", 
-      description: "Complete online perfume store with product catalog, WhatsApp ordering system, and customer reviews. Features automated order notifications and inventory tracking.",
-      image: "/api/placeholder/400/300",
+      category: "E-Commerce Website", 
+      description: "Complete online perfume store with product catalog, WhatsApp ordering system, and customer reviews.",
+      outcome: "+15 leads/week via WhatsApp",
+      image: "https://images.unsplash.com/photo-1588405748880-12d1d2a59d32?w=400&h=300&fit=crop",
       features: ["WhatsApp Integration", "Product Catalog", "Order Management", "Mobile Responsive"],
-      link: "#",
+      liveLink: "https://preshyscents.vercel.app",
       icon: <Sparkles className="h-5 w-5" />
     },
     {
       title: "Gnade Wigs",
       category: "Business Website",
-      description: "Professional hair and beauty business website with service showcase, appointment booking via WhatsApp, and customer gallery. Optimized for local search.",
-      image: "/api/placeholder/400/300", 
+      description: "Professional hair and beauty business website with service showcase, appointment booking via WhatsApp, and customer gallery.",
+      outcome: "+22 bookings/month via WhatsApp",
+      image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&h=300&fit=crop", 
       features: ["Service Showcase", "WhatsApp Booking", "Photo Gallery", "Local SEO"],
-      link: "#",
+      liveLink: "https://gnadewigs.vercel.app",
       icon: <Users className="h-5 w-5" />
-    },
-    {
-      title: "Lagos Food Hub",
-      category: "Landing Page",
-      description: "Single-page restaurant website with menu display, online ordering through WhatsApp, and location details. Built for local food delivery business.",
-      image: "/api/placeholder/400/300",
-      features: ["Menu Display", "WhatsApp Orders", "Location Map", "Fast Loading"],
-      link: "#",
-      icon: <ShoppingBag className="h-5 w-5" />
     }
   ];
 
@@ -57,21 +50,22 @@ const Portfolio = () => {
         </div>
 
         {/* Portfolio Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 gap-12 mb-12">
           {projects.map((project, index) => (
             <Card key={index} className="overflow-hidden shadow-card hover:shadow-hero transition-all duration-300 transform hover:-translate-y-2">
               {/* Project Image */}
-              <div className="relative h-48 bg-gradient-card">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="bg-primary/10 p-4 rounded-full mb-2 inline-block">
-                      {project.icon}
-                    </div>
-                    <p className="text-sm text-muted-foreground">Live Website Preview</p>
-                  </div>
-                </div>
+              <div className="relative h-64">
+                <img 
+                  src={project.image} 
+                  alt={`${project.title} website screenshot`}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
                 <Badge className="absolute top-4 left-4 bg-primary text-primary-foreground">
                   {project.category}
+                </Badge>
+                <Badge className="absolute top-4 right-4 bg-success text-success-foreground">
+                  {project.outcome}
                 </Badge>
               </div>
 
@@ -97,9 +91,14 @@ const Portfolio = () => {
 
                 {/* View Project Button */}
                 <div className="flex gap-2">
-                  <Button variant="outline" className="flex-1" size="sm">
+                  <Button 
+                    variant="outline" 
+                    className="flex-1" 
+                    size="sm"
+                    onClick={() => window.open(project.liveLink, '_blank')}
+                  >
                     <ExternalLink className="mr-2 h-4 w-4" />
-                    View Live
+                    View Live Site
                   </Button>
                   <Button size="sm" onClick={openWhatsApp}>
                     <MessageCircle className="h-4 w-4" />

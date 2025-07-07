@@ -62,7 +62,7 @@ const Contact = () => {
                 <CardTitle className="text-2xl">Get in Touch</CardTitle>
                 <CardDescription>
                   Ready to get started? Reach out via WhatsApp for the fastest response, 
-                  or use any method below.
+                  or use the contact form below.
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -121,6 +121,70 @@ const Contact = () => {
                     </div>
                   </div>
                 </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Contact Form */}
+          <div>
+            <Card className="p-6 shadow-card">
+              <CardHeader className="pb-4">
+                <CardTitle className="text-2xl">Send a Message</CardTitle>
+                <CardDescription>
+                  Fill out the form below and we'll get back to you within 2 hours.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+                  <div>
+                    <label className="block text-sm font-medium mb-2">Your Name</label>
+                    <input 
+                      type="text" 
+                      className="w-full p-3 border border-input rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                      placeholder="Enter your full name"
+                      required
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium mb-2">Business Name</label>
+                    <input 
+                      type="text" 
+                      className="w-full p-3 border border-input rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                      placeholder="Your business name"
+                      required
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium mb-2">Email Address</label>
+                    <input 
+                      type="email" 
+                      className="w-full p-3 border border-input rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                      placeholder="your@email.com"
+                      required
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium mb-2">Message</label>
+                    <textarea 
+                      rows={4}
+                      className="w-full p-3 border border-input rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent resize-none"
+                      placeholder="Tell us about your business and website needs..."
+                      required
+                    ></textarea>
+                  </div>
+                  
+                  <Button 
+                    type="submit" 
+                    className="w-full py-3 shadow-button"
+                    onClick={openWhatsApp}
+                  >
+                    <MessageCircle className="mr-2 h-4 w-4" />
+                    Send Message via WhatsApp
+                  </Button>
+                </form>
               </CardContent>
             </Card>
           </div>

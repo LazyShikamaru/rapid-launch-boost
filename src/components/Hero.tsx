@@ -26,29 +26,28 @@ const Hero = () => {
 
         {/* Main Headline */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
-          Get Your Local Business
+          Launch Your Local Business Website
           <span className="block bg-gradient-to-r from-accent to-accent-foreground bg-clip-text text-transparent">
-            Online & Found
+            in 72 Hours
           </span>
-          in 72 Hours
+          — or It's FREE!
         </h1>
 
         {/* Subheadline */}
-        <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-          Professional websites for local businesses that convert visitors into customers. 
-          <span className="font-semibold"> Guaranteed LIVE in 72 hours, or it's FREE!</span>
+        <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-4xl mx-auto leading-relaxed">
+          Single‑page site with WhatsApp lead capture, SEO-ready, 
+          <span className="font-semibold"> tailored for micro-businesses in Nigeria.</span>
         </p>
 
         {/* Key Benefits */}
         <div className="flex flex-wrap justify-center gap-4 mb-8">
           {[
-            "Get Found on Google",
-            "Capture More Leads", 
-            "WhatsApp Integration",
-            "Mobile Optimized"
+            "Get found on Google Maps via LocalBusiness SEO",
+            "Capture new leads instantly with WhatsApp integration", 
+            "Live within 72 hours—or it's free"
           ].map((benefit) => (
-            <Badge key={benefit} variant="secondary" className="px-4 py-2 text-base">
-              <Zap className="mr-2 h-4 w-4" />
+            <Badge key={benefit} variant="secondary" className="px-6 py-3 text-base font-medium">
+              <CheckCircle className="mr-2 h-4 w-4" />
               {benefit}
             </Badge>
           ))}
@@ -59,10 +58,10 @@ const Hero = () => {
           <Button 
             size="lg" 
             onClick={openWhatsApp}
-            className="px-8 py-4 text-lg font-semibold shadow-button bg-success hover:bg-success/90 text-success-foreground"
+            className="px-12 py-6 text-xl font-bold shadow-button bg-success hover:bg-success/90 text-success-foreground"
           >
-            <MessageCircle className="mr-2 h-5 w-5" />
-            Get Started - WhatsApp Me
+            <MessageCircle className="mr-3 h-6 w-6" />
+            Start Now (72‑Hour Guarantee)
           </Button>
           <Button 
             size="lg" 
