@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Monitor, Smartphone } from "lucide-react";
+import { Monitor, Smartphone, ExternalLink } from "lucide-react";
+import designPreview from "@/assets/professional-website-design.jpg";
 
 const VisualPreview = () => {
   return (
@@ -14,15 +15,21 @@ const VisualPreview = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <Card className="shadow-hero overflow-hidden">
             <CardContent className="p-0">
               {/* Mockup Container */}
               <div className="relative bg-gradient-to-br from-primary to-accent p-8 md:p-12">
-                <div className="flex items-center gap-4 mb-6">
-                  <Monitor className="h-8 w-8 text-primary-foreground" />
-                  <Smartphone className="h-8 w-8 text-primary-foreground" />
-                  <span className="text-primary-foreground font-semibold">Desktop & Mobile Optimized</span>
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center gap-4">
+                    <Monitor className="h-8 w-8 text-primary-foreground" />
+                    <Smartphone className="h-8 w-8 text-primary-foreground" />
+                    <span className="text-primary-foreground font-semibold">Desktop & Mobile Optimized</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-primary-foreground/80">
+                    <ExternalLink className="h-4 w-4" />
+                    <span className="text-sm">Inspired by top Dribbble designs</span>
+                  </div>
                 </div>
                 
                 {/* Browser Mockup */}
@@ -41,36 +48,34 @@ const VisualPreview = () => {
                     </div>
                   </div>
                   
-                  {/* Website Preview */}
-                  <div className="bg-background p-6 min-h-[300px]">
-                    <div className="space-y-4">
-                      {/* Header */}
-                      <div className="flex justify-between items-center pb-4 border-b">
-                        <div className="w-20 h-8 bg-primary rounded"></div>
-                        <div className="flex gap-2">
-                          <div className="w-16 h-6 bg-muted rounded"></div>
-                          <div className="w-16 h-6 bg-muted rounded"></div>
-                        </div>
-                      </div>
-                      
-                      {/* Hero */}
-                      <div className="text-center py-8">
-                        <div className="w-3/4 h-8 bg-foreground rounded mx-auto mb-3"></div>
-                        <div className="w-1/2 h-4 bg-muted rounded mx-auto mb-6"></div>
-                        <div className="w-32 h-10 bg-success rounded mx-auto"></div>
-                      </div>
-                      
-                      {/* Features */}
-                      <div className="grid grid-cols-3 gap-4">
-                        {[...Array(3)].map((_, i) => (
-                          <div key={i} className="text-center space-y-2">
-                            <div className="w-12 h-12 bg-primary/20 rounded-full mx-auto"></div>
-                            <div className="w-full h-3 bg-muted rounded"></div>
-                            <div className="w-3/4 h-2 bg-muted/60 rounded mx-auto"></div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
+                  {/* Website Preview - Real Dribbble Design */}
+                  <div className="bg-background">
+                    <img 
+                      src={designPreview} 
+                      alt="Professional website design preview from Dribbble - modern landing page for creators and coaches"
+                      className="w-full h-auto object-cover"
+                      style={{ maxHeight: '500px', objectFit: 'cover' }}
+                    />
+                  </div>
+                </div>
+
+                {/* Features Below */}
+                <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-primary-foreground/90">
+                  <div className="text-center">
+                    <div className="text-xs font-semibold">Fast Loading</div>
+                    <div className="text-xs opacity-75">Under 3 seconds</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-xs font-semibold">Mobile First</div>
+                    <div className="text-xs opacity-75">Perfect on all devices</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-xs font-semibold">Payment Ready</div>
+                    <div className="text-xs opacity-75">Stripe & PayPal</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-xs font-semibold">SEO Optimized</div>
+                    <div className="text-xs opacity-75">Google ready</div>
                   </div>
                 </div>
               </div>
