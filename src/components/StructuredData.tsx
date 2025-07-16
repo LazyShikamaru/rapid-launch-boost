@@ -2,55 +2,36 @@ import { useEffect } from 'react';
 
 const StructuredData = () => {
   useEffect(() => {
-    // LocalBusiness Schema
-    const localBusinessSchema = {
+    // Professional Service Schema
+    const professionalServiceSchema = {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Joshua Nwabunwanne Web Development",
-      "description": "Professional website development for Nigerian local businesses. 72-hour delivery guarantee with WhatsApp integration and SEO optimization.",
+      "@type": "ProfessionalService",
+      "name": "Joshua Nwabunwanne - Web Developer for Creators",
+      "description": "72-hour website guarantee for international creators, coaches, and solopreneurs. Professional websites with payment integration and lead capture.",
       "url": "https://joshua-nwabunwanne.vercel.app",
       "telephone": "+234-801-234-5678",
       "email": "joshua@example.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Lagos",
-        "addressCountry": "Nigeria"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "6.5244",
-        "longitude": "3.3792"
-      },
-      "openingHours": "Mo-Su 09:00-21:00",
-      "priceRange": "₦50,000 - ₦200,000",
-      "serviceArea": {
-        "@type": "Country",
-        "name": "Nigeria"
-      },
-      "areaServed": "Nigeria",
+      "openingHours": "Mo-Fr 09:00-18:00",
+      "priceRange": "$500 - $2000",
+      "areaServed": [
+        {"@type": "Country", "name": "United Kingdom"},
+        {"@type": "Country", "name": "United States"},
+        {"@type": "Place", "name": "European Union"},
+        {"@type": "Country", "name": "Nigeria"}
+      ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Website Development Services",
+        "name": "Website Development Services for Creators",
         "itemListElement": [
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Basic Landing Page",
-              "description": "Professional single-page website with WhatsApp integration"
+              "name": "72-Hour Website Launch",
+              "description": "Professional website with payment integration, lead capture, and WhatsApp integration"
             },
-            "price": "50000",
-            "priceCurrency": "NGN"
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service", 
-              "name": "Multi-Page Business Site",
-              "description": "Complete business website with multiple pages"
-            },
-            "price": "120000",
-            "priceCurrency": "NGN"
+            "price": "500",
+            "priceCurrency": "USD"
           }
         ]
       }
@@ -63,34 +44,34 @@ const StructuredData = () => {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Is the 72-hour guarantee real?", 
+          "name": "What do I need to provide?", 
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Absolutely! We guarantee your website will be completely finished and live within 72 hours of project start, or you don't pay. We've delivered on this promise for 50+ Nigerian businesses with a 100% success rate."
+            "text": "Just your business details, logo (if you have one), content/copy, and any specific requirements. I'll handle the rest - design, development, payment setup, and deployment."
           }
         },
         {
           "@type": "Question",
-          "name": "Will it include WhatsApp lead capture?",
+          "name": "How do I pay?",
           "acceptedAnswer": {
             "@type": "Answer", 
-            "text": "Yes, every website includes full WhatsApp integration. Visitors can contact you instantly with pre-filled messages, and you'll receive notifications for every lead. This feature alone has helped our clients generate hundreds of leads."
+            "text": "I accept USD/EUR payments via Stripe, PayPal, or bank transfer. Payment is due 50% upfront to start, 50% on delivery. All pricing is transparent with no hidden fees."
           }
         },
         {
           "@type": "Question",
-          "name": "What if I need changes after the website is live?",
+          "name": "Is the 72-hour guarantee real?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We include 7 days of free minor revisions after launch. For major changes or additional features, we offer affordable maintenance packages starting from ₦10,000/month."
+            "text": "Yes! Your site will be live and fully functional within 72 hours of receiving all materials. If I don't deliver on time, you get it completely free - no questions asked."
           }
         },
         {
           "@type": "Question", 
-          "name": "Do you provide hosting and domain?",
+          "name": "Will it include WhatsApp lead capture?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, we handle everything! Your package includes 1 year of premium hosting, SSL certificate, and help with domain registration. No technical hassles for you."
+            "text": "Every site includes WhatsApp integration, contact forms, and payment buttons (Stripe/PayPal) so you can start capturing leads and processing payments immediately."
           }
         }
       ]
@@ -100,23 +81,23 @@ const StructuredData = () => {
     const serviceSchema = {
       "@context": "https://schema.org",
       "@type": "Service",
-      "name": "72-Hour Website Development for Nigerian Businesses",
-      "description": "Professional website development service specifically designed for Nigerian local businesses. Includes WhatsApp integration, SEO optimization, and mobile responsiveness.",
+      "name": "72-Hour Website Development for Creators and Coaches",
+      "description": "Professional website development service for international creators, coaches, and solopreneurs. Includes payment integration, lead capture, WhatsApp integration, and SEO optimization.",
       "provider": {
-        "@type": "LocalBusiness",
-        "name": "Joshua Nwabunwanne Web Development"
+        "@type": "ProfessionalService",
+        "name": "Joshua Nwabunwanne - Web Developer for Creators"
       },
-      "areaServed": "Nigeria",
+      "areaServed": ["United Kingdom", "United States", "European Union", "Nigeria"],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Website Packages",
+        "name": "Creator Website Packages",
         "itemListElement": [
           {
             "@type": "Offer",
-            "name": "Basic Landing Page - 72 Hour Guarantee",
-            "price": "50000",
-            "priceCurrency": "NGN",
-            "description": "Single-page website with WhatsApp integration, guaranteed delivery in 72 hours"
+            "name": "72-Hour Creator Website Launch",
+            "price": "500",
+            "priceCurrency": "USD",
+            "description": "Professional website with payment integration, lead capture, and guaranteed 72-hour delivery"
           }
         ]
       }
@@ -126,15 +107,15 @@ const StructuredData = () => {
     const organizationSchema = {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Joshua Nwabunwanne Web Development",
+      "name": "Joshua Nwabunwanne - Web Developer for Creators",
       "url": "https://joshua-nwabunwanne.vercel.app",
       "logo": "https://joshua-nwabunwanne.vercel.app/logo.png",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+234-801-234-5678",
         "contactType": "customer service",
-        "availableLanguage": ["English", "Igbo", "Yoruba"],
-        "areaServed": "Nigeria"
+        "availableLanguage": ["English"],
+        "areaServed": ["UK", "US", "EU", "Nigeria"]
       },
       "sameAs": [
         "https://wa.me/2348012345678"
@@ -142,7 +123,7 @@ const StructuredData = () => {
     };
 
     // Insert schemas into head
-    const schemas = [localBusinessSchema, faqSchema, serviceSchema, organizationSchema];
+    const schemas = [professionalServiceSchema, faqSchema, serviceSchema, organizationSchema];
     
     schemas.forEach((schema, index) => {
       const script = document.createElement('script');

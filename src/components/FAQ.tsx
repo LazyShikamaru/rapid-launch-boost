@@ -16,28 +16,28 @@ const FAQ = () => {
 
   const faqs = [
     {
+      question: "What do I need to provide?",
+      answer: "Just your business details, logo (if you have one), content/copy, and any specific requirements. I'll handle the rest - design, development, payment setup, and deployment."
+    },
+    {
+      question: "How do I pay?",
+      answer: "I accept USD/EUR payments via Stripe, PayPal, or bank transfer. Payment is due 50% upfront to start, 50% on delivery. All pricing is transparent with no hidden fees."
+    },
+    {
+      question: "Do I own the site after delivery?",
+      answer: "Absolutely! You get full ownership of your website, including all source code, hosting setup instructions, and login credentials. It's 100% yours."
+    },
+    {
+      question: "What if I'm not happy?",
+      answer: "I offer unlimited revisions during the 72-hour build period. Plus, I include 7 days of post-launch tweaks to ensure everything is perfect. Your satisfaction is guaranteed."
+    },
+    {
       question: "Is the 72-hour guarantee real?",
-      answer: "Absolutely! We guarantee your website will be completely finished and live within 72 hours of project start, or you don't pay. We've delivered on this promise for 50+ Nigerian businesses with a 100% success rate."
+      answer: "Yes! Your site will be live and fully functional within 72 hours of receiving all materials. If I don't deliver on time, you get it completely free - no questions asked."
     },
     {
       question: "Will it include WhatsApp lead capture?",
-      answer: "Yes, every website includes full WhatsApp integration. Visitors can contact you instantly with pre-filled messages, and you'll receive notifications for every lead. This feature alone has helped our clients generate hundreds of leads."
-    },
-    {
-      question: "What if I need changes after the website is live?",
-      answer: "We include 7 days of free minor revisions after launch. For major changes or additional features, we offer affordable maintenance packages starting from ₦10,000/month."
-    },
-    {
-      question: "Do you provide hosting and domain?",
-      answer: "Yes, we handle everything! Your package includes 1 year of premium hosting, SSL certificate, and help with domain registration. No technical hassles for you."
-    },
-    {
-      question: "Will my website work on mobile phones?",
-      answer: "Absolutely! Every website we build is fully responsive and optimized for mobile devices. Since most Nigerian internet users browse on phones, mobile optimization is our top priority."
-    },
-    {
-      question: "How do I get started?",
-      answer: "Simply click the WhatsApp button and send us your business details. We'll discuss your needs, send you a proposal, and start building your website immediately after payment."
+      answer: "Every site includes WhatsApp integration, contact forms, and payment buttons (Stripe/PayPal) so you can start capturing leads and processing payments immediately."
     }
   ];
 
@@ -49,10 +49,10 @@ const FAQ = () => {
             Frequently Asked Questions
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Got Questions? We Have Answers
+            Frequently Asked Questions
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Everything you need to know about our 72-hour website service
+            Everything you need to know about launching your site in 72 hours
           </p>
         </div>
 
