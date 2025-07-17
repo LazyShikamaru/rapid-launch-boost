@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Monitor, Smartphone, ExternalLink } from "lucide-react";
-import designPreview from "@/assets/professional-website-design.jpg";
+import preshyScentsPreview from "@/assets/preshy-scents-website.png";
+import everythingAccessoriesPreview from "@/assets/everything-accessories-website.png";
 
 const VisualPreview = () => {
   return (
@@ -11,76 +12,121 @@ const VisualPreview = () => {
             See What You Get
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Clean, professional designs that convert visitors into paying customers
+            Real websites we've built for entrepreneurs. Clean, professional, and optimized for conversions.
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto">
+        {/* Real Project Examples */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
+          {/* Preshy Scents */}
           <Card className="shadow-hero overflow-hidden">
             <CardContent className="p-0">
-              {/* Mockup Container */}
-              <div className="relative bg-gradient-to-br from-primary to-accent p-8 md:p-12">
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center gap-4">
-                    <Monitor className="h-8 w-8 text-primary-foreground" />
-                    <Smartphone className="h-8 w-8 text-primary-foreground" />
-                    <span className="text-primary-foreground font-semibold">Desktop & Mobile Optimized</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-primary-foreground/80">
-                    <ExternalLink className="h-4 w-4" />
-                    <span className="text-sm">Inspired by top Dribbble designs</span>
+              <div className="bg-muted p-3 flex items-center gap-2">
+                <div className="flex gap-1">
+                  <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                  <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                  <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                </div>
+                <div className="flex-1 text-center">
+                  <div className="bg-background rounded px-3 py-1 text-sm text-muted-foreground">
+                    dynamic-unicorn-bd00dc.netlify.app
                   </div>
                 </div>
-                
-                {/* Browser Mockup */}
-                <div className="bg-background rounded-lg shadow-2xl overflow-hidden">
-                  {/* Browser Header */}
-                  <div className="bg-muted p-3 flex items-center gap-2">
-                    <div className="flex gap-1">
-                      <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                      <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                      <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                    </div>
-                    <div className="flex-1 text-center">
-                      <div className="bg-background rounded px-3 py-1 text-sm text-muted-foreground">
-                        yourname.com
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Website Preview - Real Dribbble Design */}
-                  <div className="bg-background">
-                    <img 
-                      src={designPreview} 
-                      alt="Professional website design preview from Dribbble - modern landing page for creators and coaches"
-                      className="w-full h-auto object-cover"
-                      style={{ maxHeight: '500px', objectFit: 'cover' }}
-                    />
-                  </div>
-                </div>
-
-                {/* Features Below */}
-                <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-primary-foreground/90">
-                  <div className="text-center">
-                    <div className="text-xs font-semibold">Fast Loading</div>
-                    <div className="text-xs opacity-75">Under 3 seconds</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-xs font-semibold">Mobile First</div>
-                    <div className="text-xs opacity-75">Perfect on all devices</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-xs font-semibold">Payment Ready</div>
-                    <div className="text-xs opacity-75">Stripe & PayPal</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-xs font-semibold">SEO Optimized</div>
-                    <div className="text-xs opacity-75">Google ready</div>
-                  </div>
+              </div>
+              <div className="relative">
+                <img 
+                  src={preshyScentsPreview} 
+                  alt="Preshy Scents luxury perfume website with WhatsApp ordering"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-bold text-lg mb-2">Preshy Scents</h3>
+                <p className="text-muted-foreground text-sm mb-3">Luxury perfume brand with WhatsApp ordering system</p>
+                <div className="flex items-center justify-between">
+                  <div className="text-sm text-green-600 font-semibold">+40% sales increase</div>
+                  <a 
+                    href="https://dynamic-unicorn-bd00dc.netlify.app/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-primary hover:text-primary/80 text-sm font-medium gap-1"
+                  >
+                    <ExternalLink className="h-3 w-3" />
+                    View Live
+                  </a>
                 </div>
               </div>
             </CardContent>
           </Card>
+
+          {/* Everything Accessories */}
+          <Card className="shadow-hero overflow-hidden">
+            <CardContent className="p-0">
+              <div className="bg-muted p-3 flex items-center gap-2">
+                <div className="flex gap-1">
+                  <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                  <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                  <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                </div>
+                <div className="flex-1 text-center">
+                  <div className="bg-background rounded px-3 py-1 text-sm text-muted-foreground">
+                    fastidious-fairy-cd41ad.netlify.app
+                  </div>
+                </div>
+              </div>
+              <div className="relative">
+                <img 
+                  src={everythingAccessoriesPreview} 
+                  alt="Everything Accessories fashion website with online shopping"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-bold text-lg mb-2">Everything Accessories</h3>
+                <p className="text-muted-foreground text-sm mb-3">Fashion accessories with online shopping & WhatsApp</p>
+                <div className="flex items-center justify-between">
+                  <div className="text-sm text-green-600 font-semibold">+60% lead capture</div>
+                  <a 
+                    href="https://fastidious-fairy-cd41ad.netlify.app/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-primary hover:text-primary/80 text-sm font-medium gap-1"
+                  >
+                    <ExternalLink className="h-3 w-3" />
+                    View Live
+                  </a>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Features Grid */}
+        <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div className="p-4">
+              <Monitor className="h-8 w-8 mx-auto mb-2 text-primary" />
+              <div className="text-sm font-semibold">Mobile First</div>
+              <div className="text-xs text-muted-foreground">Perfect on all devices</div>
+            </div>
+            <div className="p-4">
+              <Smartphone className="h-8 w-8 mx-auto mb-2 text-primary" />
+              <div className="text-sm font-semibold">WhatsApp Ready</div>
+              <div className="text-xs text-muted-foreground">Direct lead capture</div>
+            </div>
+            <div className="p-4">
+              <ExternalLink className="h-8 w-8 mx-auto mb-2 text-primary" />
+              <div className="text-sm font-semibold">Payment Ready</div>
+              <div className="text-xs text-muted-foreground">Stripe & PayPal</div>
+            </div>
+            <div className="p-4">
+              <div className="h-8 w-8 mx-auto mb-2 bg-primary rounded-full flex items-center justify-center">
+                <span className="text-primary-foreground text-xs font-bold">SEO</span>
+              </div>
+              <div className="text-sm font-semibold">Google Ready</div>
+              <div className="text-xs text-muted-foreground">Optimized for search</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
