@@ -20,11 +20,6 @@ const VisualPreview = () => {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Real revenue-generating websites built for ambitious entrepreneurs
           </p>
-          <div className="mt-8">
-            <Badge className="bg-success text-success-foreground px-6 py-3 text-lg font-bold">
-              ₦15M+ Client Revenue Generated
-            </Badge>
-          </div>
         </div>
 
         {/* Real Project Examples */}
@@ -55,10 +50,10 @@ const VisualPreview = () => {
                 <div className="flex items-center justify-between mb-2">
                   <h3 className="font-bold text-lg">Preshy Scents</h3>
                   <Badge className="bg-success text-success-foreground px-3 py-1 text-sm font-bold">
-                    ₦2.5M Monthly
+                    ₦800K Monthly
                   </Badge>
                 </div>
-                <p className="text-muted-foreground text-sm mb-4">Premium fragrance empire generating consistent monthly revenue through automated systems and premium positioning</p>
+                <p className="text-muted-foreground text-sm mb-4">Luxury fragrance business generating consistent monthly revenue with seamless payment integration and premium positioning</p>
                 <div className="flex gap-2">
                   <Button 
                     variant="outline" 
@@ -82,7 +77,7 @@ const VisualPreview = () => {
                     onClick={openWhatsApp}
                   >
                     <MessageCircle className="mr-1 h-3 w-3" />
-                    WhatsApp 'LAUNCH' - Start Now
+                    WhatsApp 'LAUNCH' – Start Now
                   </Button>
                 </div>
               </div>
@@ -115,10 +110,10 @@ const VisualPreview = () => {
                 <div className="flex items-center justify-between mb-2">
                   <h3 className="font-bold text-lg">Everything Accessories</h3>
                   <Badge className="bg-success text-success-foreground px-3 py-1 text-sm font-bold">
-                    ₦800K Monthly
+                    ₦2.5M Monthly
                   </Badge>
                 </div>
-                <p className="text-muted-foreground text-sm mb-4">High-converting accessories store with advanced inventory management and customer retention systems</p>
+                <p className="text-muted-foreground text-sm mb-4">Fashion accessories store scaling to 6-figure monthly earnings with advanced e-commerce features and premium customer experience</p>
                 <div className="flex gap-2">
                   <Button 
                     variant="outline" 
@@ -142,7 +137,7 @@ const VisualPreview = () => {
                     onClick={openWhatsApp}
                   >
                     <MessageCircle className="mr-1 h-3 w-3" />
-                    WhatsApp 'LAUNCH' - Start Now
+                    WhatsApp 'LAUNCH' – Start Now
                   </Button>
                 </div>
               </div>

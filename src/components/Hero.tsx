@@ -48,7 +48,7 @@ const Hero = () => {
         
         {/* Supporting Text */}
         <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 max-w-3xl mx-auto">
-          Start earning online with seamless payment integration and professional design that converts visitors into paying customers
+          Start earning online fast with seamless payment integration and professional design that converts visitors into paying customers
         </p>
 
         {/* CTA Button */}

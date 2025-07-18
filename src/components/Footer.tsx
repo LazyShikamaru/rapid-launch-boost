@@ -4,11 +4,11 @@ import { MessageCircle, Code, Mail, Phone, MapPin, Clock, CheckCircle } from "lu
 
 const Footer = () => {
   const openWhatsApp = () => {
-    window.open('https://wa.me/2348012345678?text=Hi Joshua! I need a website for my business.', '_blank');
+    window.open('https://wa.me/2349110387813?text=WhatsApp \'LAUNCH\' - Start Now', '_blank');
   };
 
   const openEmail = () => {
-    window.open('mailto:joshua@example.com?subject=Website Project Inquiry', '_blank');
+    window.open('mailto:officialnwabunwanne@gmail.com?subject=Website Project Inquiry', '_blank');
   };
 
   const currentYear = new Date().getFullYear();
@@ -41,7 +41,7 @@ const Footer = () => {
                 className="bg-success hover:bg-success/90 text-success-foreground shadow-button"
               >
                 <MessageCircle className="mr-2 h-4 w-4" />
-                WhatsApp: +234 801 234 5678
+                WhatsApp 'LAUNCH' - Start Now
               </Button>
               <div className="flex items-center gap-2">
                 <Badge className="bg-success text-success-foreground">
@@ -79,7 +79,7 @@ const Footer = () => {
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
                 <button onClick={openEmail} className="text-sm hover:text-primary transition-colors">
-                  joshua@example.com
+                  officialnwabunwanne@gmail.com
                 </button>
               </div>
               <div className="flex items-center gap-2">
