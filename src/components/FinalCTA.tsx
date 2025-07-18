@@ -4,7 +4,7 @@ import { MessageCircle, Clock, Users } from "lucide-react";
 
 const FinalCTA = () => {
   const openWhatsApp = () => {
-    window.open('https://wa.me/2348012345678?text=LAUNCH', '_blank');
+    window.open('https://wa.me/2349110387813?text=WhatsApp \'LAUNCH\' - Start Now', '_blank');
   };
 
   return (
@@ -44,7 +44,7 @@ const FinalCTA = () => {
           className="px-12 py-6 text-xl font-bold shadow-button bg-success hover:bg-success/90 text-success-foreground"
         >
           <MessageCircle className="mr-3 h-6 w-6" />
-          DM Me 'LAUNCH' Now
+          WhatsApp 'LAUNCH' - Start Now
         </Button>
 
         <p className="text-primary-foreground/70 mt-4">

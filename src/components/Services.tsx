@@ -1,169 +1,136 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, Clock, Zap, MessageCircle, Globe, Smartphone, TrendingUp } from "lucide-react";
+import { CheckCircle, MessageCircle, Rocket, Zap, TrendingUp } from "lucide-react";
 
 const Services = () => {
   const openWhatsApp = (service: string) => {
-    const message = `Hi Joshua! I'm interested in your ${service} service. Can we discuss my project?`;
-    window.open(`https://wa.me/2348012345678?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://wa.me/2349110387813?text=WhatsApp 'LAUNCH' - Start Now - ${service}`, '_blank');
   };
 
   const services = [
     {
-      title: "Basic Landing Page",
-      price: "₦50,000",
-      originalPrice: "₦75,000",
-      description: "A professional single-page website that introduces your business and converts visitors into customers.",
+      title: "Side Hustle Starter",
+      price: "₦400,000",
+      icon: <Rocket className="h-8 w-8" />,
+      description: "Perfect for launching your first income stream",
       features: [
-        "Professional single-page design",
-        "Contact form integration", 
-        "WhatsApp business integration",
-        "Mobile-responsive design",
-        "Basic SEO optimization",
-        "Google Maps integration",
-        "Social media links"
+        "Mobile-optimized website",
+        "Payment integration (Stripe/PayPal)",
+        "Lead capture system",
+        "2 training sessions",
+        "30-day support",
+        "SEO optimization"
       ],
-      guarantee: "Guaranteed LIVE in 72 hours, or it's FREE!",
-      popular: true,
-      icon: <Globe className="h-8 w-8" />
+      popular: false
     },
     {
-      title: "Multi-Page Business Site",
-      price: "₦120,000",
-      originalPrice: "₦150,000", 
-      description: "Complete business website with multiple pages to showcase your full service offering.",
+      title: "Solopreneur Pro",
+      price: "₦650,000",
+      icon: <Zap className="h-8 w-8" />,
+      description: "Scale your business with advanced features",
       features: [
-        "Up to 5 professional pages",
-        "Advanced contact forms",
-        "WhatsApp & SMS integration",
-        "Photo gallery/portfolio",
-        "Service/product pages",
-        "About & testimonial pages",
-        "Advanced SEO optimization"
+        "Everything in Starter",
+        "Advanced booking system",
+        "Email automation setup",
+        "4 training sessions",
+        "60-day support",
+        "Google Ads integration",
+        "Analytics dashboard"
       ],
-      guarantee: "Guaranteed LIVE in 72 hours, or it's FREE!",
-      popular: false,
-      icon: <TrendingUp className="h-8 w-8" />
+      popular: true
     },
     {
-      title: "E-Commerce Starter",
-      price: "₦200,000",
-      originalPrice: "₦300,000",
-      description: "Start selling online with a complete e-commerce solution for your local business.",
+      title: "E-Commerce Accelerator",
+      price: "₦850,000",
+      icon: <TrendingUp className="h-8 w-8" />,
+      description: "Complete online store for maximum revenue",
       features: [
-        "Product catalog (up to 50 items)",
-        "Shopping cart functionality", 
-        "Payment integration (Paystack)",
-        "Order management system",
-        "Customer accounts",
-        "Inventory tracking",
-        "WhatsApp order notifications"
+        "Everything in Pro",
+        "Full e-commerce store",
+        "Inventory management",
+        "Multiple payment gateways",
+        "6 training sessions",
+        "90-day support",
+        "Conversion optimization",
+        "Revenue tracking"
       ],
-      guarantee: "Guaranteed LIVE in 72 hours, or it's FREE!",
-      popular: false,
-      icon: <Smartphone className="h-8 w-8" />
+      popular: false
     }
   ];
 
   return (
-    <section id="services" className="py-20 bg-secondary/30">
+    <section className="py-20 bg-secondary/20">
       <div className="container mx-auto px-4">
-        {/* Section Header */}
         <div className="text-center mb-16">
-          <Badge className="mb-4 bg-primary text-primary-foreground px-4 py-2">
-            <Zap className="mr-2 h-4 w-4" />
-            72-Hour Website Services
-          </Badge>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Get Your Business Online 
-            <span className="text-primary"> Fast</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Premium Side Hustle Packages
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Professional websites designed specifically for local Nigerian businesses. 
-            Every website includes WhatsApp integration and is guaranteed to go live within 72 hours.
+            High-ticket services for serious entrepreneurs ready to invest in their success
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {services.map((service, index) => (
-            <Card 
-              key={index} 
-              className={`relative overflow-hidden shadow-card hover:shadow-hero transition-all duration-300 transform hover:-translate-y-2 ${
-                service.popular ? 'ring-2 ring-primary' : ''
-              }`}
-            >
+            <Card key={index} className={`relative shadow-card hover:shadow-hero transition-all duration-300 ${service.popular ? 'border-primary border-2' : ''}`}>
               {service.popular && (
-                <Badge className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1">
+                <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1">
                   Most Popular
                 </Badge>
               )}
               
-              <CardHeader className="pb-4">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 bg-primary/10 rounded-lg text-primary">
+              <CardHeader className="text-center pb-4">
+                <div className="flex justify-center mb-4">
+                  <div className="p-4 bg-primary/10 rounded-full text-primary">
                     {service.icon}
                   </div>
-                  <div>
-                    <CardTitle className="text-2xl">{service.title}</CardTitle>
-                    <div className="flex items-center gap-2 mt-1">
-                      <span className="text-3xl font-bold text-primary">{service.price}</span>
-                      <span className="text-lg text-muted-foreground line-through">{service.originalPrice}</span>
-                    </div>
-                  </div>
                 </div>
-                <CardDescription className="text-base leading-relaxed">
-                  {service.description}
-                </CardDescription>
+                <CardTitle className="text-2xl font-bold">{service.title}</CardTitle>
+                <div className="text-3xl font-black text-primary mb-2">{service.price}</div>
+                <p className="text-muted-foreground">{service.description}</p>
               </CardHeader>
 
-              <CardContent className="space-y-6">
-                {/* Features */}
-                <div className="space-y-3">
+              <CardContent className="pt-0">
+                <ul className="space-y-3 mb-8">
                   {service.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-success mt-0.5 flex-shrink-0" />
+                    <li key={featureIndex} className="flex items-center gap-3">
+                      <CheckCircle className="h-5 w-5 text-success flex-shrink-0" />
                       <span className="text-sm">{feature}</span>
-                    </div>
+                    </li>
                   ))}
-                </div>
+                </ul>
 
-                {/* Guarantee */}
-                <div className="p-4 bg-success/10 rounded-lg border border-success/20">
-                  <div className="flex items-center gap-2 text-success font-semibold">
-                    <Clock className="h-4 w-4" />
-                    {service.guarantee}
-                  </div>
-                </div>
-
-                {/* CTA Button */}
                 <Button 
-                  className="w-full py-3 shadow-button"
                   onClick={() => openWhatsApp(service.title)}
+                  className={`w-full py-6 text-lg font-semibold ${service.popular ? 'bg-primary hover:bg-primary/90' : 'bg-secondary hover:bg-secondary/90'}`}
                 >
-                  <MessageCircle className="mr-2 h-4 w-4" />
-                  Order Now - WhatsApp
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  WhatsApp 'LAUNCH' - Start Now
                 </Button>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        {/* Additional Info */}
-        <div className="text-center">
-          <Card className="inline-block p-6 shadow-card">
-            <h3 className="text-xl font-semibold mb-2">Need Something Custom?</h3>
-            <p className="text-muted-foreground mb-4">
-              Have specific requirements? Let's discuss your unique business needs.
-            </p>
-            <Button 
-              variant="outline"
-              onClick={() => openWhatsApp("Custom Website Solution")}
-            >
-              <MessageCircle className="mr-2 h-4 w-4" />
-              Discuss Custom Project
-            </Button>
+        {/* Custom Project Inquiry */}
+        <div className="text-center mt-16">
+          <Card className="max-w-2xl mx-auto shadow-card">
+            <CardContent className="p-8">
+              <h3 className="text-2xl font-bold mb-4">Need Something Custom?</h3>
+              <p className="text-muted-foreground mb-6">
+                Enterprise solutions and custom development for unique business needs
+              </p>
+              <Button 
+                onClick={() => openWhatsApp('Custom Project')}
+                variant="outline" 
+                size="lg"
+                className="px-8 py-4"
+              >
+                <MessageCircle className="mr-2 h-5 w-5" />
+                WhatsApp 'LAUNCH' - Start Now
+              </Button>
+            </CardContent>
           </Card>
         </div>
       </div>

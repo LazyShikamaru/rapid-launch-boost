@@ -1,19 +1,30 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Monitor, Smartphone, ExternalLink } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Monitor, Smartphone, ExternalLink, MessageCircle } from "lucide-react";
 import preshyScentsPreview from "@/assets/preshy-scents-website.png";
 import everythingAccessoriesPreview from "@/assets/everything-accessories-website.png";
 
 const VisualPreview = () => {
+  const openWhatsApp = () => {
+    window.open('https://wa.me/2349110387813?text=WhatsApp \'LAUNCH\' - Start Now', '_blank');
+  };
+
   return (
     <section className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            See What You Get
+            Side Hustles That Scale
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Real websites we've built for entrepreneurs. Clean, professional, and optimized for conversions.
+            Real revenue-generating websites built for ambitious entrepreneurs
           </p>
+          <div className="mt-8">
+            <Badge className="bg-success text-success-foreground px-6 py-3 text-lg font-bold">
+              ₦15M+ Client Revenue Generated
+            </Badge>
+          </div>
         </div>
 
         {/* Real Project Examples */}
@@ -41,19 +52,38 @@ const VisualPreview = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="font-bold text-lg mb-2">Preshy Scents</h3>
-                <p className="text-muted-foreground text-sm mb-3">Luxury perfume brand with WhatsApp ordering system</p>
-                <div className="flex items-center justify-between">
-                  <div className="text-sm text-green-600 font-semibold">+40% sales increase</div>
-                  <a 
-                    href="https://dynamic-unicorn-bd00dc.netlify.app/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-primary hover:text-primary/80 text-sm font-medium gap-1"
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="font-bold text-lg">Preshy Scents</h3>
+                  <Badge className="bg-success text-success-foreground px-3 py-1 text-sm font-bold">
+                    ₦2.5M Monthly
+                  </Badge>
+                </div>
+                <p className="text-muted-foreground text-sm mb-4">Premium fragrance empire generating consistent monthly revenue through automated systems and premium positioning</p>
+                <div className="flex gap-2">
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    asChild
+                    className="flex-1"
                   >
-                    <ExternalLink className="h-3 w-3" />
-                    View Live
-                  </a>
+                    <a 
+                      href="https://dynamic-unicorn-bd00dc.netlify.app/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center"
+                    >
+                      <ExternalLink className="mr-1 h-3 w-3" />
+                      View Live
+                    </a>
+                  </Button>
+                  <Button 
+                    size="sm"
+                    className="flex-1"
+                    onClick={openWhatsApp}
+                  >
+                    <MessageCircle className="mr-1 h-3 w-3" />
+                    WhatsApp 'LAUNCH' - Start Now
+                  </Button>
                 </div>
               </div>
             </CardContent>
@@ -82,19 +112,38 @@ const VisualPreview = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="font-bold text-lg mb-2">Everything Accessories</h3>
-                <p className="text-muted-foreground text-sm mb-3">Fashion accessories with online shopping & WhatsApp</p>
-                <div className="flex items-center justify-between">
-                  <div className="text-sm text-green-600 font-semibold">+60% lead capture</div>
-                  <a 
-                    href="https://fastidious-fairy-cd41ad.netlify.app/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-primary hover:text-primary/80 text-sm font-medium gap-1"
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="font-bold text-lg">Everything Accessories</h3>
+                  <Badge className="bg-success text-success-foreground px-3 py-1 text-sm font-bold">
+                    ₦800K Monthly
+                  </Badge>
+                </div>
+                <p className="text-muted-foreground text-sm mb-4">High-converting accessories store with advanced inventory management and customer retention systems</p>
+                <div className="flex gap-2">
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    asChild
+                    className="flex-1"
                   >
-                    <ExternalLink className="h-3 w-3" />
-                    View Live
-                  </a>
+                    <a 
+                      href="https://fastidious-fairy-cd41ad.netlify.app/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center"
+                    >
+                      <ExternalLink className="mr-1 h-3 w-3" />
+                      View Live
+                    </a>
+                  </Button>
+                  <Button 
+                    size="sm"
+                    className="flex-1"
+                    onClick={openWhatsApp}
+                  >
+                    <MessageCircle className="mr-1 h-3 w-3" />
+                    WhatsApp 'LAUNCH' - Start Now
+                  </Button>
                 </div>
               </div>
             </CardContent>

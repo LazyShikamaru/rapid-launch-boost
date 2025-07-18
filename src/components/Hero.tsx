@@ -8,7 +8,7 @@ const Hero = () => {
   };
 
   const openWhatsApp = () => {
-    window.open('https://wa.me/2348012345678?text=I\'m ready to launch', '_blank');
+    window.open('https://wa.me/2349110387813?text=LAUNCH', '_blank');
   };
 
   return (
@@ -35,15 +35,20 @@ const Hero = () => {
         {/* Main Headline */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
           <Rocket className="inline-block mr-4 h-12 w-12 md:h-16 md:w-16" />
-          Go Live in 72 Hours
+          Launch Your Side Hustle Website
           <span className="block bg-gradient-to-r from-accent to-accent-foreground bg-clip-text text-transparent">
-            — Or It's FREE
+            in 72 Hours
           </span>
         </h1>
 
         {/* Subheadline */}
-        <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-4xl mx-auto leading-relaxed">
-          Perfect for <span className="font-semibold text-accent">creators, coaches, and solopreneurs</span> who need a clean, professional online presence — fast.
+        <p className="text-xl md:text-2xl text-primary-foreground/90 mb-6 max-w-4xl mx-auto leading-relaxed">
+          Perfect for <span className="font-semibold text-accent">side hustlers</span> who need results NOW
+        </p>
+        
+        {/* Supporting Text */}
+        <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 max-w-3xl mx-auto">
+          Start earning online with seamless payment integration and professional design that converts visitors into paying customers
         </p>
 
         {/* CTA Button */}
@@ -54,7 +59,7 @@ const Hero = () => {
             className="px-12 py-6 text-xl font-bold shadow-button bg-success hover:bg-success/90 text-success-foreground"
           >
             <MessageCircle className="mr-3 h-6 w-6" />
-            Start My Launch →
+            LAUNCH Now
           </Button>
         </div>
 
